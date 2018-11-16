@@ -4,6 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# Input username and password in following variables
+username = ''
+password = ''
+
 # Using Chrome to access web
 driver = webdriver.Chrome()
 # Open the website and wait for the webpage to load
@@ -16,9 +20,9 @@ driver.get('https://apexfusion.com/login')
 
 # Enter username and password to login
 id_box = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, 'index-login-username')))
-id_box.send_keys('CastilloLab')
+id_box.send_keys(username)
 pass_box = driver.find_element_by_id('index-login-password')
-pass_box.send_keys('Saltwater7')
+pass_box.send_keys(password)
 login_button = driver.find_element_by_class_name('btn-primary').click()
 
 #try:
