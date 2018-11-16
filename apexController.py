@@ -4,9 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Input username and password in following variables
+#######################################################
+## Edit username and password in following variables ##
 username = ''
 password = ''
+#######################################################
 
 # Using Chrome to access web
 driver = webdriver.Chrome()
